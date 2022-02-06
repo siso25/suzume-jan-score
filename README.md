@@ -31,27 +31,27 @@ console.log(score)
 
 ### Tile types
 #### suited tiles
-|  isRed  |  number  |  tile string  |
+|  red tile  |  number  |  tile string  |
 | ---- | ---- | ---- |
-|  false  |  1  |  '1'  |
-|  false  |  2  |  '2'  |
-|  false  |  3  |  '3'  |
-|  false  |  4  |  '4'  |
-|  false  |  5  |  '5'  |
-|  false  |  6  |  '6'  |
-|  false  |  7  |  '7'  |
-|  false  |  8  |  '8'  |
-|  false  |  9  |  '9'  |
-|  true  |  1  |  '1r'  |
-|  true  |  2  |  '2r'  |
-|  true  |  3  |  '3r'  |
-|  true  |  4  |  '4r'  |
-|  true  |  5  |  '5r'  |
-|  true  |  6  |  '6r'  |
-|  true  |  7  |  '7r'  |
-|  true  |  8  |  '8r'  |
-|  true  |  9  |  '9r'  |
-### honor tiles
+|    |  1  |  '1'  |
+|    |  2  |  '2'  |
+|    |  3  |  '3'  |
+|    |  4  |  '4'  |
+|    |  5  |  '5'  |
+|    |  6  |  '6'  |
+|    |  7  |  '7'  |
+|    |  8  |  '8'  |
+|    |  9  |  '9'  |
+|  ○  |  1  |  '1r'  |
+|  ○  |  2  |  '2r'  |
+|  ○  |  3  |  '3r'  |
+|  ○  |  4  |  '4r'  |
+|  ○  |  5  |  '5r'  |
+|  ○  |  6  |  '6r'  |
+|  ○  |  7  |  '7r'  |
+|  ○  |  8  |  '8r'  |
+|  ○  |  9  |  '9r'  |
+#### honor tiles
 |  tile name  |  tile string  |
 | ---- | ---- |
 |  Red Dragon  |  'rd'  |
