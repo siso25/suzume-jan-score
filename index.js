@@ -1,8 +1,51 @@
 const Score = require('./lib/score.js')
 
-// const numberOfPeople = 3
-// const isLeader = true
-const dora = '1'
-const tiles = ['1', '1', '1', 'rd', 'rd', 'rd']
-const score = new Score()
-console.log(score.calculate(dora, tiles))
+const calculateScore = (isLeader, numberOfPeople, dora, arrayTiles) => {
+  const score = new Score()
+  const withoutLeaderBonus = score.calculate(dora, arrayTiles)
+
+  if (!isWinnableScore(withoutLeaderBonus)) {
+    const zeroScoreObj = {
+      ron: 0,
+      tsumo: 0,
+      perPerson: 0
+    }
+    return zeroScoreObj
+  }
+
+  const leaderBonus = calcLeaderBonus(isLeader)
+  const withLeaderBonus = withoutLeaderBonus + leaderBonus
+
+  const ronScore = withLeaderBonus
+  const withoutWinningPlayer = numberOfPeople - 1
+  const scorePerPerson = calcScorePerPerson(withLeaderBonus, withoutWinningPlayer)
+  const tsumoScore = scorePerPerson * withoutWinningPlayer
+
+  const scoreObj = {
+    ron: ronScore,
+    tsumo: tsumoScore,
+    perPerson: scorePerPerson
+  }
+
+  return scoreObj
+}
+
+const isWinnableScore = (score) => {
+  const minWinnableScore = 5
+  if (score < minWinnableScore) {
+    return false
+  }
+
+  return true
+}
+
+const calcLeaderBonus = (isLeader) => {
+  return isLeader ? 2 : 0
+}
+
+const calcScorePerPerson = (score, numberOfPeople) => {
+  const scorePerPerson = Math.ceil(score / numberOfPeople)
+  return scorePerPerson
+}
+
+exports.calculate = calculateScore
