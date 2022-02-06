@@ -1,18 +1,18 @@
 # suzume-jan-score
 This is a function to calculate the score of [Suzume Jan](https://sugorokuya.jp/p/suzume-jong/).
 
-# Installation
+## Installation
 ```bash
 npm install suzume-jan-score
 ```
 
-# Getting Started
+## Getting Started
 ```javascript
 const suzumeJanScore = require('suzume-jan-score')
 ```
 
-# Usage
-## calculate(isLeader, numberOfPeople, dora, tiles)
+## Usage
+### calculate(isLeader, numberOfPeople, dora, tiles)
 When you want to calculate the score, pass the following argument to execute.
 
 - isLeader: Pass true when the winning player is leader.
@@ -29,8 +29,8 @@ console.log(score)
 //=> {ron: 9, tsumo: 10, perPeople: 5}
 ```
 
-## Tile types
-### suited tiles
+### Tile types
+#### suited tiles
 |  isRed  |  number  |  tile string  |
 | ---- | ---- | ---- |
 |  false  |  1  |  '1'  |
