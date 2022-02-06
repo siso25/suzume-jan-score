@@ -6,8 +6,12 @@
   "scripts": {
     "test": "mocha test/"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siso25/suzume-jan-score"
+  },
   "author": "siso25",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "mocha": "^9.2.0"
   },
