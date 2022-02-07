@@ -16,9 +16,9 @@ const suzumeJanScore = require('suzume-jan-score')
 When you want to calculate the score, pass the following argument to execute.
 
 - isLeader: Pass true when the winning player is leader.
-- numberOfPeple: number of players
-- dora: dora tile of the game (see ["Tile types"](#tile-types))
-- tiles: tiles in a player's hand (see ["Tile types"](#tile-types))
+- numberOfPeple: Number of participants in the game
+- dora: Dora tile of the game (see ["Tile types"](#tile-types))
+- tiles: Tiles in a player's hand (see ["Tile types"](#tile-types))
 
 ```javascript
 const dora = '7'
@@ -26,7 +26,7 @@ const tiles = ['1r', '1', '1', '7', '8', '9']
 const score = suzumeJanScore.calculate(true, 3, dora, tiles)
 
 console.log(score)
-//=> {ron: 9, tsumo: 10, perPeople: 5}
+//=> {ron: 9, tsumo: 10, perPerson: 5}
 ```
 
 ### Tile types
