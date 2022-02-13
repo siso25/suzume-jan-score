@@ -27,7 +27,7 @@ When you want to calculate the score, pass the following argument to execute.
 ```javascript
 const dora = '7'
 const tiles = ['1r', '1', '1', '7', '8', '9']
-const score = suzumeJanScore.calculate(true, 3, dora, tiles)
+const score = suzumeJanScore.calculate(3, dora, tiles, true)
 
 console.log(score)
 //=> {ron: 9, tsumo: 10, perPerson: 5}
