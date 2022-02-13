@@ -1,6 +1,6 @@
-const Score = require('./lib/score.js')
+const Score = require('./lib/score')
 
-const calculateScore = (numberOfPeople, dora, arrayTiles, isLeader = false) => {
+module.exports.calculate = (numberOfPeople, dora, arrayTiles, isLeader = false) => {
   const score = new Score()
   const withoutLeaderBonus = score.calculate(dora, arrayTiles)
 
@@ -47,5 +47,3 @@ const calcScorePerPerson = (score, numberOfPeople) => {
   const scorePerPerson = Math.ceil(score / numberOfPeople)
   return scorePerPerson
 }
-
-exports.calculate = calculateScore

@@ -2,7 +2,11 @@
   "name": "suzume-jan-score",
   "version": "1.0.2",
   "description": "",
-  "main": "index.js",
+  "exports": {
+    "import": "./index-mjs.mjs",
+    "require": "./index.js",
+    "default": "./index.js"
+  },
   "scripts": {
     "test": "mocha test/"
   },
@@ -15,5 +19,6 @@
   "devDependencies": {
     "mocha": "^9.2.0"
   },
+  "type": "commonjs",
   "private": false
 }
