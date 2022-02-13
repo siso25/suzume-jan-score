@@ -8,7 +8,11 @@ npm install suzume-jan-score
 
 ## Getting Started
 ```javascript
+// CommonJS
 const suzumeJanScore = require('suzume-jan-score')
+
+// ESModules
+import { suzumeJanScore } from 'suzume-jan-score'
 ```
 
 ## Usage
@@ -18,7 +22,7 @@ When you want to calculate the score, pass the following argument to execute.
 - numberOfPeple: Number of participants in the game
 - dora: Dora tile of the game (see ["Tile types"](#tile-types))
 - tiles: Tiles in a player's hand (see ["Tile types"](#tile-types))
-- isLeader(Optional): Pass true when the winning player is leader.(default false)
+- isLeader(Optional): Pass true when the winning player is leader. (default `false`)
 
 ```javascript
 const dora = '7'
