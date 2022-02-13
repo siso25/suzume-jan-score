@@ -1,6 +1,6 @@
 const Score = require('./lib/score.js')
 
-const calculateScore = (isLeader, numberOfPeople, dora, arrayTiles) => {
+const calculateScore = (numberOfPeople, dora, arrayTiles, isLeader = false) => {
   const score = new Score()
   const withoutLeaderBonus = score.calculate(dora, arrayTiles)
 
